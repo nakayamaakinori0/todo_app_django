@@ -1,0 +1,15 @@
+<head>
+  <title>TODO List</title>
+</head>
+<body>
+  <h1>TODO List</h1>
+  <ul>
+    {% for todo in todos %}
+    <li>
+      {% if todo.completed %}
+      <strike>{{ todo.tile }}</strike>
+      {% else %} {{ todo.title}} {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</body>

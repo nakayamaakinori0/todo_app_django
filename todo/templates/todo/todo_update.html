@@ -1,0 +1,23 @@
+<head>
+  <title>Update TODO</title>
+</head>
+<body>
+  <h1>Update TODO</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{todo.title}}" />
+    <label for="completed">Completed:</label>
+    <input
+      type="checkbox"
+      id="completed"
+      name="completed"
+      {%
+      if
+      todo.completed
+      %}checked{%
+      endif
+      %}
+    />
+  </form>
+</body>
